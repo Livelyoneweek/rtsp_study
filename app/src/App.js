@@ -9,6 +9,7 @@ const App = () => {
     var videoUrl = `ws://${ffmpegIP}:6789/`;
     var player = new JSMpeg.VideoElement("#video-canvas", videoUrl, {
       autoplay: true,
+      bufferSize: 2048 * 2048, // 원하는 버퍼 크기로 설정 (디폴트: 512kb)
     });
     console.log(player);
   });
